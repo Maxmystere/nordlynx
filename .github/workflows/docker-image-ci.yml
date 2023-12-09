@@ -56,7 +56,7 @@ jobs:
           tags: |
             # set latest tag for default branch
             type=raw,enable={{is_default_branch}},value=latest
-            type=raw,enable={{is_default_branch}},pattern={{date 'YYYY-MM-DD'}}
+            type=schedule,pattern={{date 'YYYY-MM-DD'}}
             type=ref,enable=true,priority=600,prefix=pr-,suffix=,event=pr
 
       # Build and push Docker image with Buildx
